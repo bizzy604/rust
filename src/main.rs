@@ -16,7 +16,7 @@ fn main() {
     } else {
         println!("Small number");
     }
-    */
+    
 
     // use this when you have only a few conditions
     let some_bool = true;
@@ -31,4 +31,29 @@ fn main() {
         100..=199 => println!("Big number"),
         _ => println!("Huge number"),
     }
+        */
+
+    enum Direction {
+        North,
+        South,
+        East,
+        West,
+    }
+
+    fn sub_county(dir: &Direction) -> &str {
+        match dir {
+            Direction::North => "Kaikor",
+            Direction::South => "Lokichogio",
+            Direction::East => "Kaiti",
+            Direction::West => "Kapchok",
+        }
+    }
+    let dir: Direction = Direction::North;
+    println!("The sub-county is: {}", sub_county(&dir));
+    let dir: Direction = Direction::South;
+    println!("The sub-county is: {}", sub_county(&dir));
+    let dir: Direction = Direction::East;
+    println!("The sub-county is: {}", sub_county(&dir));
+    let dir: Direction = Direction::West;
+    println!("The sub-county is: {}", sub_county(&dir));
 }
